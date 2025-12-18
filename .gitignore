@@ -1,0 +1,27 @@
+# WordPress core config
+wp-config.php
+
+# Uploads (media files)
+wp-content/uploads/
+
+# Cache & backups
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backup*
+
+# Logs
+*.log
+error_log
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Node / build tools (if used)
+node_modules/
+dist/
+
+# Environment files
+.env

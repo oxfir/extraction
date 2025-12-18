@@ -1,0 +1,136 @@
+.ultimate-tag-cloud-container .ultimate-tag-cloud-words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+}
+.ultimate-tag-cloud-container .ultimate-tag-cloud-words .tag-word-wrap {
+  position: relative;
+}
+.ultimate-tag-cloud-container .ultimate-tag-cloud-words .tag-word-wrap a {
+  display: block;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.ultimate-tag-cloud-container .ultimate-tag-cloud-words .tag-word-wrap:not(.rand-color) {
+  --colorNormal: 104, 177, 222;
+  --colorHigh: 8, 115, 180;
+}
+.ultimate-tag-cloud-container .ultimate-tag-cloud-words .tag-word-wrap:not(.rand-size) {
+  --randSize: 16px;
+}
+.ultimate-tag-cloud-container.style-default .ultimate-tag-cloud-words .tag-word-wrap a {
+  color: rgb(var(--colorNormal));
+  font-size: var(--randSize);
+}
+.ultimate-tag-cloud-container.style-default .ultimate-tag-cloud-words .tag-word-wrap a:hover {
+  color: rgb(var(--colorHigh));
+}
+.ultimate-tag-cloud-container.style-sphere .ultimate-tag-cloud-words .tag-word-wrap {
+  transform: rotate3d(1, 1, 0.5, 15deg);
+  -webkit-transform: rotate3d(1, 1, 0.5, 15deg);
+}
+.ultimate-tag-cloud-container.style-sphere .ultimate-tag-cloud-words .tag-word-wrap a {
+  color: rgb(var(--colorHigh));
+  font-size: var(--randSize);
+  background-color: rgba(var(--colorNormal), 0.2);
+  border: 1px solid rgb(var(--colorNormal));
+  padding: 5px 7px;
+  border-radius: 5px;
+}
+.ultimate-tag-cloud-container.style-sphere .ultimate-tag-cloud-words .tag-word-wrap a:hover {
+  background-color: rgba(var(--colorNormal), 0.5);
+}
+.ultimate-tag-cloud-container.style-label .ultimate-tag-cloud-words .tag-word-wrap a {
+  padding: 7px 13px 7px 30px;
+  transition: all 0.3s ease;
+  background-color: rgba(var(--colorNormal), 0.2);
+  color: rgb(var(--colorHigh));
+  filter: brightness(80%);
+  font-size: var(--randSize);
+  clip-path: polygon(0 50%, 10% 0, 100% 0, 100% 100%, 10% 100%);
+}
+.ultimate-tag-cloud-container.style-label .ultimate-tag-cloud-words .tag-word-wrap a:hover {
+  background-color: rgba(var(--colorNormal), 0.5);
+}
+.ultimate-tag-cloud-container.style-label .ultimate-tag-cloud-words .tag-word-wrap:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #fff;
+  z-index: 1;
+}
+.ultimate-tag-cloud-container.style-block .ultimate-tag-cloud-words .tag-word-wrap a {
+  padding: 5px 7px;
+  transition: all 0.3s ease;
+  background-color: rgba(var(--colorNormal), 0.2);
+  color: rgb(var(--colorHigh));
+  border: 1px solid rgb(var(--colorNormal));
+  filter: brightness(80%);
+  font-size: var(--randSize);
+}
+.ultimate-tag-cloud-container.style-block .ultimate-tag-cloud-words .tag-word-wrap a:hover {
+  background-color: rgba(var(--colorNormal), 0.5);
+}
+.ultimate-tag-cloud-container.style-ribbon .ultimate-tag-cloud-words {
+  align-items: baseline;
+}
+.ultimate-tag-cloud-container.style-ribbon .ultimate-tag-cloud-words .tag-word-wrap {
+  position: relative;
+  overflow: hidden;
+  padding-top: 15px;
+}
+.ultimate-tag-cloud-container.style-ribbon .ultimate-tag-cloud-words .tag-word-wrap a {
+  padding: 10px 20px 10px 40px;
+  transition: all 0.3s ease;
+  background-color: rgba(var(--colorNormal), 0.7);
+  color: rgb(var(--colorHigh));
+  font-size: var(--randSize);
+}
+.ultimate-tag-cloud-container.style-ribbon .ultimate-tag-cloud-words .tag-word-wrap a:hover {
+  background-color: rgba(var(--colorNormal), 0.9);
+}
+.ultimate-tag-cloud-container.style-ribbon .ultimate-tag-cloud-words .tag-word-wrap:after, .ultimate-tag-cloud-container.style-ribbon .ultimate-tag-cloud-words .tag-word-wrap:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -1px;
+  bottom: 0;
+  width: 40px;
+  background-color: rgb(var(--colorNormal));
+  pointer-events: none;
+}
+.ultimate-tag-cloud-container.style-ribbon .ultimate-tag-cloud-words .tag-word-wrap:after {
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+  z-index: 2;
+}
+.ultimate-tag-cloud-container.style-ribbon .ultimate-tag-cloud-words .tag-word-wrap:before {
+  top: 15px;
+  filter: brightness(80%);
+  clip-path: polygon(0 100%, 0 0, 100% 0);
+  z-index: 1;
+}
+.ultimate-tag-cloud-container.style-ribbon.ribbon-style1 .ultimate-tag-cloud-words .tag-word-wrap {
+  padding-top: 15px;
+}
+.ultimate-tag-cloud-container.style-ribbon.ribbon-style1 .ultimate-tag-cloud-words .tag-word-wrap a {
+  clip-path: polygon(90% 0, 100% 100%, 0 100%, 0 0);
+  padding: 10px 25px 10px 40px;
+}
+.ultimate-tag-cloud-container.style-ribbon.ribbon-style2 .ultimate-tag-cloud-words .tag-word-wrap {
+  padding-top: 15px;
+}
+.ultimate-tag-cloud-container.style-ribbon.ribbon-style2 .ultimate-tag-cloud-words .tag-word-wrap a {
+  clip-path: polygon(0 0, 100% 0, 95% 50%, 100% 100%, 0 100%);
+}
+.ultimate-tag-cloud-container.style-ribbon.ribbon-style3 .ultimate-tag-cloud-words .tag-word-wrap {
+  padding-top: 15px;
+}
+.ultimate-tag-cloud-container.style-ribbon.ribbon-style3 .ultimate-tag-cloud-words .tag-word-wrap a {
+  border-radius: 0 100px 100px 0;
+}
